@@ -219,14 +219,14 @@ window.addEventListener('DOMContentLoaded', function () {
   //   const el = document.querySelector('#PARAGRAPH444 .ladi-paragraph');
   //   if (el) el.textContent = name;
   // }
-  const el = document.querySelector('.bride');
-  const el1 = document.querySelector('.groom');
+  const brides = document.querySelectorAll('.bride');
+  const grooms = document.querySelectorAll('.groom');
 
   if (target === "bride") {
-    if (el) el.style.display = "block";
-    if (el1) el1.style.display = "none";
+    brides.forEach(bride => bride.style.display = "block");
+    grooms.forEach(groom => groom.style.display = "none");
   } else {
-    if (el) el.style.display = "none";
-    if (el1) el1.style.display = "block";
+    brides.forEach(bride => bride.style.display = "none");
+    grooms.forEach(groom => groom.style.display = "block");
   }
 });
